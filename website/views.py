@@ -4,6 +4,13 @@ from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
 
+
+def search_records(request):
+	if request.method == "POST":
+		return render(request, 'search_records.html', {})
+	else:
+		return render(request, 'search_records.html', {})
+
 def home(request):
 	records = Record.objects.all()
 
