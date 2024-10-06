@@ -4,14 +4,16 @@
 
 {% if user_records %}
     {% for user_record in user_records %}
-    	<h3> {{user_record.first_name}} {{user_record.last_name}} </h3>
+        <h3>{{ user_record.first_name }} {{ user_record.last_name }}</h3>
         <strong>Email: </strong>{{ user_record.email }}<br/>
         <strong>Phone: </strong>{{ user_record.phone }}<br/>
         <strong>Address: </strong>{{ user_record.address }}<br/>
         <strong>City: </strong>{{ user_record.city }}<br/>
         <strong>State: </strong>{{ user_record.state }}<br/>
         <strong>Zipcode: </strong>{{ user_record.zipcode }}<br/>
-        <strong>Created at: </strong>{{ user_record.created_at }}<br/>
+        <strong>Created at: </strong>{{ user_record.created_at }}<br/> 
+        <strong>ID: </strong>
+        <a href="{% url 'record' user_record.id %}">{{ user_record.id }}</a><br/>
         <hr/> 
     {% endfor %}
 {% else %}
