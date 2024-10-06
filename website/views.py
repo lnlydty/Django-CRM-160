@@ -6,10 +6,14 @@ from .models import Record
 
 
 def search_records(request):
-	if request.method == "POST":
-		return render(request, 'search_records.html', {})
-	else:
-		return render(request, 'search_records.html', {})
+    query = request.GET.get('q')  # Get the search query from the request
+    user_records = []
+
+    if query:
+        user_records = Record.objects.filter(first_name=query)  # Get all matching records
+
+    return render(request, 'search_records.html', {'user_records': user_records})
+
 
 def home(request):
 	records = Record.objects.all()

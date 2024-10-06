@@ -34,13 +34,11 @@
       
     </div>
 
-      <form class="d-flex" role="search" method=POST action="{% url 'search_records' %}">
-
-      {% csrf_token %}
-
-      <input class="form-control me-2" type="search" placeholder="Search Records" aria-label="Search">
-      <button class="btn btn-outline-dark" type="submit">Search</button>
+      <form method="get" action="{% url 'search_records' %}">
+          <input type="text" name="q" placeholder="Search by first name" required>
+          <button type="submit">Search</button>
       </form>
+
 
   </div>
 </nav>
