@@ -1,9 +1,9 @@
 from django.db import models
 
-# Create your models here.
+# Create your models here. 
 
 class Record(models.Model):
-	created_at = models.DateTimeField(auto_now_add=True)
+	created_at = models.DateTimeField(auto_now_add=True) # sets to current date and time when the record is first created
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
 	email = models.CharField(max_length=100)

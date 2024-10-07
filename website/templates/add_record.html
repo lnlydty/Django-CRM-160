@@ -6,7 +6,7 @@
 <br/>
 
 <form method="POST" action="{% url 'add_record' %}">
-	{% csrf_token %}
+	{% csrf_token %} <!-- cross-site request forgery -->
 	{{ form.as_p }}
 
   <br/>

@@ -38,7 +38,7 @@ def home(request):
 
 
 #def login_user(request):
-#	pass
+#	(removed)
 
 def logout_user(request):
 	logout(request)

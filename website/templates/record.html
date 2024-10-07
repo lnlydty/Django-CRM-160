@@ -1,3 +1,5 @@
+<!-- displays user_record when the corresponding id is clicked -->
+
 {% extends 'base.html' %}
 {% block content %}
 
@@ -27,8 +29,9 @@
 <br.><br/>
 <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
 
-<a href="{% url 'update_record' user_record.id %}" class="btn btn-secondary">Update record</a>
+<a href="{% url 'update_record' user_record.id %}" class="btn btn-success">Update record</a>
 
 </p>
 <a href="{% url 'delete_record' user_record.id %}" class="btn btn-danger">Delete</a>
+
 {% endblock %}

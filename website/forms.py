@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import Record
 
-class SignUpForm(UserCreationForm):
+class SignUpForm(UserCreationForm): # --> register.html
 	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
 	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
 	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}))
@@ -32,7 +32,7 @@ class SignUpForm(UserCreationForm):
 		self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'	
 
 
-#Records
+#Records --> add_record.html
 class AddRecordForm(forms.ModelForm):
 	first_name = forms.CharField(required=True, widget = forms.widgets.TextInput(attrs={"placeholder":"First Name", "class":"form-control"}), label="")
 	last_name = forms.CharField(required=True, widget = forms.widgets.TextInput(attrs={"placeholder":"Last Name", "class":"form-control"}), label="")

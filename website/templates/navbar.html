@@ -1,3 +1,5 @@
+<!-- html contains the add record, logout, register, login buttons -->
+
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2ba771;">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">
@@ -34,7 +36,8 @@
       
     </div>
 
-      <form method="get" action="{% url 'search_records' %}">
+<!-- Added search bar  -->
+      <form method="get" action="{% url 'search_records' %}"> 
           <input type="text" name="q" placeholder="Search by first name" required>
           <button type="submit" style="background-color: #2ba771; color: white; border: 1.5px solid white; padding: 3.5px 9px; cursor: pointer; font-size: 14px;">
           Search</button>
