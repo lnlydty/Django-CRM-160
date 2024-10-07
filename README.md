@@ -18,5 +18,7 @@ This web application serves as a requirement for my LIS 160 class, designed to d
     - Quickly find records by entering the first name in the search bar. Displays records alphabetically with IDs linked to the main user record page.
 </ul>
 
+<i>Note: Users must log in first to access these features. Please register if you don't have an existing account.</i>
+
 <br/>
 <i>Alliah Mae Hisu-an</i>
