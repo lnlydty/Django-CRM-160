@@ -15,7 +15,7 @@ This web application serves as a requirement for my LIS 160 class, designed to d
     <li>Delete records</li>
     - Remove user records that are no longer required.
     <li>Search functionality</li>
-    - Quickly find records by entering the first name in the search bar.
+    - Quickly find records by entering the first name in the search bar. Displays records alphabetically with IDs linked to the main user record page.
 </ul>
 
 <br/>
