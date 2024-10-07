@@ -13,6 +13,7 @@ def search_records(request):
 	    if query:
 	        user_records = Record.objects.filter(first_name=query).order_by('last_name')  
 	        # Get all matching records && sort alphabetically
+	        
 	    return render(request, 'search_records.html', {'user_records': user_records})
 
 	else: 
