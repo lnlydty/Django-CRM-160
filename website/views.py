@@ -6,14 +6,18 @@ from .models import Record
 
 
 def search_records(request):
-    query = request.GET.get('q')  # Get the search query from the request
-    user_records = []
+	if request.user.is_authenticated: # user must be logged in to check user record
+	    query = request.GET.get('q')  # Get the search query from the request
+	    user_records = []
 
-    if query:
-        user_records = Record.objects.filter(first_name=query).order_by('last_name')  
-        # Get all matching records && sort alphabetically
+	    if query:
+	        user_records = Record.objects.filter(first_name=query).order_by('last_name')  
+	        # Get all matching records && sort alphabetically
+	    return render(request, 'search_records.html', {'user_records': user_records})
 
-    return render(request, 'search_records.html', {'user_records': user_records})
+	else: 
+		messages.success(request, "You must be logged in to search records.")
+		return redirect('home')
 
 
 def home(request):
